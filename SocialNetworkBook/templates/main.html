@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block statics%}
+    {% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <h1 class="logo"><a href="{% url 'home_page' %}"><span>Mysite</span>.ir</a></h1>
+            <ul>
+            <li><a href="{% url 'home_page' %}">خانه</a></li>
+            <li><a href="{% url 'about' %}">درباره ما</a></li>
+            <li><a href="{% url 'contact' %}">تماس با ما</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+    <footer>
+        <p>Copyright © 2021</p>
+    </footer>
+
+</body>
+</html>
